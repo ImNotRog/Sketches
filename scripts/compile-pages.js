@@ -83,3 +83,32 @@ for(const link of pages.keys()) {
 }
 
 fs.writeFileSync("./data/pages.json", JSON.stringify(writeobj));
+
+// Now for the README
+
+const lines = fs.readFileSync("./data/README-template.md").toString().split(/\n/);
+console.log(lines);
+
+let table = [
+    `| Name/Link | Description |`,
+    `|-|-|`,
+];
+
+for(const link of pages.keys()) {
+    const httpslink = `https://bubbybabur.github.io/Sketches/${link.slice(1)}`;
+    const { name, description } = pages.get(link);
+    const namelink = `[${name}](${httpslink})`;
+    const tableitem = `|${namelink}|${description}|`;
+    table.push(tableitem);
+}
+
+let newlines = [];
+for(const line of lines) {
+    if(line.includes(`+++`)) {
+        newlines.push(...table)
+    } else {
+        newlines.push(line);
+    }
+}
+
+fs.writeFileSync("./README.md", newlines.join(`\n`));

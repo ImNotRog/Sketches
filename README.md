@@ -3,6 +3,20 @@ For those remotely interested. All links below:
 
 ### Sketches
 
+| Name/Link | Description |
+|-|-|
+|[Squares](https://bubbybabur.github.io/Sketches//sketches/CAC/squares)||
+|[SIR By Area](https://bubbybabur.github.io/Sketches//sketches/SIR/SIR-by-area)||
+|[SIR By Proximity](https://bubbybabur.github.io/Sketches//sketches/SIR/SIR-by-proximity)||
+|[Fireworks](https://bubbybabur.github.io/Sketches//sketches/fireworks)||
+|[Maze Generator And Solver](https://bubbybabur.github.io/Sketches//sketches/maze-generator-and-solver)||
+|[Neural Net Colors](https://bubbybabur.github.io/Sketches//sketches/neural-net-colors)||
+|[Particle Hexagon Test](https://bubbybabur.github.io/Sketches//sketches/particle-hexagon-test)||
+|[Snake](https://bubbybabur.github.io/Sketches//sketches/snake)||
+|[Startrails](https://bubbybabur.github.io/Sketches//sketches/startrails)||
+|[Ult Tic Tac Toe](https://bubbybabur.github.io/Sketches//sketches/ult-tic-tac-toe)||
+|[Web Thing](https://bubbybabur.github.io/Sketches//sketches/web-thing)||
+
 ### WTH is p5js?
 https://p5js.org/
 https://editor.p5js.org/
