@@ -97,7 +97,7 @@ for(const link of pages.keys()) {
     const httpslink = `https://bubbybabur.github.io/Sketches/${link.slice(1)}`;
     const { name, description } = pages.get(link);
     const namelink = `[${name}](${httpslink})`;
-    const tableitem = `|${namelink}|${description}|`;
+    const tableitem = `|${namelink}|${description===`` ? `No description, but I'm sure it's fantastic.` : description}|`;
     table.push(tableitem);
 }
 
