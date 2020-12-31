@@ -5,17 +5,17 @@ For those remotely interested. All links below:
 
 | Name/Link | Description |
 |-|-|
-|[Squares](https://bubbybabur.github.io/Sketches//sketches/CAC/squares)||
-|[SIR By Area](https://bubbybabur.github.io/Sketches//sketches/SIR/SIR-by-area)||
-|[SIR By Proximity](https://bubbybabur.github.io/Sketches//sketches/SIR/SIR-by-proximity)||
-|[Fireworks](https://bubbybabur.github.io/Sketches//sketches/fireworks)||
-|[Maze Generator And Solver](https://bubbybabur.github.io/Sketches//sketches/maze-generator-and-solver)||
-|[Neural Net Colors](https://bubbybabur.github.io/Sketches//sketches/neural-net-colors)||
-|[Particle Hexagon Test](https://bubbybabur.github.io/Sketches//sketches/particle-hexagon-test)||
-|[Snake](https://bubbybabur.github.io/Sketches//sketches/snake)||
-|[Startrails](https://bubbybabur.github.io/Sketches//sketches/startrails)||
-|[Ult Tic Tac Toe](https://bubbybabur.github.io/Sketches//sketches/ult-tic-tac-toe)||
-|[Web Thing](https://bubbybabur.github.io/Sketches//sketches/web-thing)||
+|[Squares](https://bubbybabur.github.io/Sketches//sketches/CAC/squares)|A quick generative art project with squares.|
+|[SIR By Area](https://bubbybabur.github.io/Sketches//sketches/SIR/SIR-by-area)|An unrealistic susceptible-infected-removed demonstration of a virus, with transmission based on how often an area is visited.|
+|[SIR By Proximity](https://bubbybabur.github.io/Sketches//sketches/SIR/SIR-by-proximity)|An unrealistic susceptible-infected-removed demonstration of a virus, with transmission based on proximity to others infected.|
+|[Fireworks](https://bubbybabur.github.io/Sketches//sketches/fireworks)|Yeah, it's fireworks. What else is there to say?|
+|[Maze Generator And Solver](https://bubbybabur.github.io/Sketches//sketches/maze-generator-and-solver)|It generates a maze, and then solves it. These names are pretty on point.|
+|[Neural Net Colors](https://bubbybabur.github.io/Sketches//sketches/neural-net-colors)|A neural network decides what color something is based on rgb values. tl;dr a criminal underuse of AI.|
+|[Particle Hexagon Test](https://bubbybabur.github.io/Sketches//sketches/particle-hexagon-test)|I don't know what this is, you'll see.|
+|[Snake](https://bubbybabur.github.io/Sketches//sketches/snake)|It's... snake.|
+|[Star Trails](https://bubbybabur.github.io/Sketches//sketches/startrails)|Some interesting generative art.|
+|[Ultimate Tic Tac Toe](https://bubbybabur.github.io/Sketches//sketches/ult-tic-tac-toe)|Tic-Tac-Toe, but on steroids.|
+|[Web Thing](https://bubbybabur.github.io/Sketches//sketches/web-thing)|Some more cool generative art.|
 
 ### WTH is p5js?
 https://p5js.org/
