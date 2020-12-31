@@ -1,4 +1,21 @@
 
+class NoiseBackground {
+    constructor() {
+        let inc = 3;
+        noStroke();
+        for (let x = 0; x < width; x += inc) {
+            for (let y = 0; y < height; y += inc) {
+                fill(lerpColor(color("#0075A2"), color("#00FFC5"), noise(x / 200, y / 200, 0) * 2));
+                square(x - 1, y - 1, inc + 1, inc + 1);
+            }
+        }
+        this.img = get();
+    }
+    getimg() {
+        return this.img;
+    }
+}
+
 
 class RotatingParticle {
     static colors() {
@@ -65,3 +82,20 @@ class RotatingParticleSystem {
         pop();
     }
 }
+
+
+
+let system;
+let back;
+function setup() {
+    createCanvas(400, 400);
+    system = new RotatingParticleSystem();
+}
+
+function draw() {
+    background(0);
+    system.draw();
+}
+
+
+
