@@ -8,16 +8,18 @@ function setup() {
 
 function draw(){ 
     background(255,180,180);
+    noFill();
     flower.draw();
 }
 
 class Segment {
-    constructor(start, end, length) {
+    constructor(start, end, length,mass) {
         this.start = start;
         this.end = end;
         this.acc = createVector(0,0);
         this.maxforce = 10;
         this.length = length;
+        this.mymass = mass;
         this.children = [];
 
         this.deg = 0;
@@ -31,12 +33,12 @@ class Segment {
 
 
     mass() {
-        return this.length + [0,...this.children].reduce((a, b) => a + b.mass())
+        return this.mymass + [0,...this.children].reduce((a, b) => a + b.mass())
     }
 
     applyForce(f) {
-        f.div(this.mass())
-        // f.div(100);
+        // f.div(this.mass())
+        f.div(this.mymass);
         this.acc.add(f);
     }
 
@@ -95,33 +97,42 @@ class Segment {
 }
 
 class Petal extends Segment {
-    constructor(start, end, length, target) {
-        super(start,end,length);
+    constructor(start, end, length, mass, target) {
+        super(start,end,length, mass);
         this.target = target;
+    }
+
+    draw() {
+        push();
+        translate(this.start.x,this.start.y);
+        let angle = Math.atan2(this.start.x-this.end.x,this.start.y-this.end.y);
+        rotate(-angle);
+        ellipse(0,-this.length / 2,30, this.length);
+        pop();
     }
 }
 
 class Flower {
     constructor() {
         this.allsegments = [];
-        this.segmentlength = 50;
+        this.segmentlength = 25;
         this.first = new Segment(null,null,null);
         
         let curr = this.first;
 
         let startposition = createVector(width/2,height * 3 / 4);
-        for(let i = 0; i < 10; i++) {
+        for(let i = 0; i < 20; i++) {
             let nextposition = p5.Vector.add(startposition, createVector(0,-this.segmentlength))
-            curr.initChildren([new Segment(startposition, nextposition, this.segmentlength)]);
+            curr.initChildren([new Segment(startposition, nextposition, this.segmentlength, this.segmentlength)]);
             curr = curr.children[0];
             startposition = nextposition;
         }
 
         this.petallength = 100;
         let children = [];
-        for(let i = 0; i < 6; i++ ) {
-            let nextposition = p5.Vector.add(startposition, createVector(0, -this.petallength))
-            children.push(new Petal(startposition, nextposition, this.petallength, Math.PI * i / 3))
+        for(const petaldeg of [-5/12,-3/12, 0,3/12, 5/12].map(a => a * Math.PI)) {
+            let nextposition = p5.Vector.add(startposition, p5.Vector.mult( createVector(Math.cos(petaldeg), Math.sin(petaldeg)), this.petallength) )
+            children.push(new Petal(startposition, nextposition, this.petallength, 0.5, petaldeg))
         }
 
         curr.initChildren(children);
@@ -135,7 +146,7 @@ class Flower {
     draw() {
 
         let wind = p5.Vector.sub(createVector(width / 2, height / 2), createVector(mouseX,mouseY));
-        wind.mult(0.1);
+        wind.mult(0.001);
         this.first.recurse(a => {
             a.applyForce(createVector(wind.x,0));
         });
