@@ -74,7 +74,13 @@
     {
         "name": "Flocking",
         "link": "./sketches/flocking",
-        "description": "",
+        "description": "A flocking simulation. It's pretty cool.",
+        "tags": []
+    },
+    {
+        "name": "Flower Physics",
+        "link": "./sketches/flower",
+        "description": "A flower in the wind using MATH. Scary.",
         "tags": []
     }
 ]
