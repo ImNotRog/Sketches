@@ -2,7 +2,7 @@
     {
         "name": "Squares",
         "link": "./sketches/CAC/squares",
-        "description": "",
+        "description": "A quick generative art project with squares.",
         "tags": [
             "CAC"
         ]
@@ -10,7 +10,7 @@
     {
         "name": "SIR By Area",
         "link": "./sketches/SIR/SIR-by-area",
-        "description": "",
+        "description": "An unrealistic susceptible-infected-removed demonstration of a virus, with transmission based on how often an area is visited.",
         "tags": [
             "SIR"
         ]
@@ -18,7 +18,7 @@
     {
         "name": "SIR By Proximity",
         "link": "./sketches/SIR/SIR-by-proximity",
-        "description": "",
+        "description": "An unrealistic susceptible-infected-removed demonstration of a virus, with transmission based on proximity to others infected.",
         "tags": [
             "SIR"
         ]
@@ -26,49 +26,49 @@
     {
         "name": "Fireworks",
         "link": "./sketches/fireworks",
-        "description": "",
+        "description": "Yeah, it's fireworks. What else is there to say?",
         "tags": []
     },
     {
         "name": "Maze Generator And Solver",
         "link": "./sketches/maze-generator-and-solver",
-        "description": "",
+        "description": "It generates a maze, and then solves it. These names are pretty on point.",
         "tags": []
     },
     {
         "name": "Neural Net Colors",
         "link": "./sketches/neural-net-colors",
-        "description": "",
+        "description": "A neural network decides what color something is based on rgb values. tl;dr a criminal underuse of AI.",
         "tags": []
     },
     {
         "name": "Particle Hexagon Test",
         "link": "./sketches/particle-hexagon-test",
-        "description": "",
+        "description": "I don't know what this is, you'll see.",
         "tags": []
     },
     {
         "name": "Snake",
         "link": "./sketches/snake",
-        "description": "",
+        "description": "It's... snake.",
         "tags": []
     },
     {
-        "name": "Startrails",
+        "name": "Star Trails",
         "link": "./sketches/startrails",
-        "description": "",
+        "description": "Some interesting generative art.",
         "tags": []
     },
     {
-        "name": "Ult Tic Tac Toe",
+        "name": "Ultimate Tic Tac Toe",
         "link": "./sketches/ult-tic-tac-toe",
-        "description": "",
+        "description": "Tic-Tac-Toe, but on steroids.",
         "tags": []
     },
     {
         "name": "Web Thing",
         "link": "./sketches/web-thing",
-        "description": "",
+        "description": "Some more cool generative art.",
         "tags": []
     }
 ]
