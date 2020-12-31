@@ -94,7 +94,7 @@ let table = [
 ];
 
 for(const link of pages.keys()) {
-    const httpslink = `https://bubbybabur.github.io/Sketches/${link.slice(1)}`;
+    const httpslink = `https://bubbybabur.github.io/Sketches/${link.slice(2)}`;
     const { name, description } = pages.get(link);
     const namelink = `[${name}](${httpslink})`;
     const tableitem = `|${namelink}|${description===`` ? `No description, but I'm sure it's fantastic.` : description}|`;
