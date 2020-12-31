@@ -87,7 +87,6 @@ fs.writeFileSync("./data/pages.json", JSON.stringify(writeobj));
 // Now for the README
 
 const lines = fs.readFileSync("./data/README-template.md").toString().split(/\n/);
-console.log(lines);
 
 let table = [
     `| Name/Link | Description |`,
