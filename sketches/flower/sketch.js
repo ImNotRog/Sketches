@@ -19,6 +19,8 @@ class Segment {
         this.maxforce = 10;
         this.length = length;
         this.children = [];
+
+        this.deg = 0;
     }
 
     initChildren( children ) { 
@@ -35,19 +37,35 @@ class Segment {
         this.acc.add(f);
     }
 
-    update() {
+    update(deg) {
+
+        let totaldeg = deg + this.deg;
+        
+        let slope = createVector(Math.cos(totaldeg), Math.sin(totaldeg));
+        slope.mult(this.length);
+
         this.acc.limit(this.maxforce);
-        this.end.add(this.acc);
+        slope.add(this.acc);
         this.acc.mult(0);
 
-        // Do rope thing
-        let slope = p5.Vector.sub(this.end, this.start);
+        let newdeg = Math.atan2(slope.y,slope.x);
+
+        let conformingpart = deg - newdeg;
+        conformingpart *= 0.005;
+        newdeg += conformingpart;
+
+        this.deg = newdeg - deg;
+
         slope.normalize();
         slope.mult(this.length);
+
         this.end = p5.Vector.add(this.start, slope);
+
+        this.draw();
 
         for(const child of this.children) {
             child.start = this.end;
+            child.update(deg + this.deg);
         }
     }
     draw() {
@@ -86,10 +104,9 @@ class Flower {
 
     draw() {
         this.first.recurse(a => {
-            a.applyForce(createVector(300,0))
-            a.update();
-            a.draw();
+            a.applyForce(createVector(30,0))
         });
+        this.first.update(-Math.PI / 2);
     }
 }
 
